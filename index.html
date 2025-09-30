@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Seismic — Encrypted Blockchain (By Gmsniper)</title>
+  <meta name="description" content="Seismic — an encrypted, hardware-backed blockchain. Page created by Gmsniper (James William)." />
+  <style>
+    :root{
+      --top-pink:#fff0f6; --water:#e6fbff; --mid-red:rgba(255,180,180,0.24); --mid-yellow:rgba(255,245,200,0.22);
+      --card:#ffffff; --muted:#243238; --accent:#ff6fa3; --highlight: #fff3b0; --kw:#ff6f61;
+      --max-width:1200px; --radius:16px; --glass: rgba(255,255,255,0.72); --shadow: 0 12px 40px rgba(16,24,32,0.08);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--top-pink),var(--water) 18%, var(--mid-red) 50%, var(--mid-yellow) 74%, #ffffff 92%);color:var(--muted);-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    .wrap{max-width:var(--max-width);margin:28px auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo-svg{width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#ffd0e6,#c9f0ff);box-shadow:var(--shadow)}
+    .brand h1{font-size:20px;margin:0}
+    nav a{margin-left:14px;color:var(--muted);font-weight:700}
+
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:22px;margin-top:20px}
+    .card{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);border:1px solid rgba(10,20,30,0.03)}
+    .banner{width:100%;height:260px;border-radius:12px;object-fit:cover;border:1px solid rgba(0,0,0,0.05)}
+
+    .project-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+    .proj{display:flex;gap:12px;align-items:center;padding:12px;border-radius:12px;border:1px solid rgba(10,20,30,0.03);background:linear-gradient(180deg,rgba(255,255,255,0.9),#fff)}
+    .proj img{width:84px;height:64px;object-fit:cover;border-radius:8px}
+    .kw{display:inline-block;background:var(--highlight);padding:2px 8px;border-radius:999px;font-weight:700;color:var(--kw);margin-left:8px;font-size:12px}
+
+    .topics{display:flex;flex-direction:column;gap:10px}
+    .topic{padding:12px;border-radius:12px;border:1px solid rgba(0,0,0,0.04);background:linear-gradient(180deg,#fff, #fbfbfc)}
+    .topic h4{margin:0 0 6px 0}
+
+    .quiz .q{padding:12px;border-radius:12px;border:1px solid rgba(0,0,0,0.04);margin-bottom:10px}
+    .options{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+    .opt{padding:10px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.95),#fafafb);cursor:pointer;border:1px solid rgba(0,0,0,0.02)}
+    .opt.selected{outline:3px solid rgba(127,197,255,0.32)}
+
+    .score{font-weight:800;font-size:18px;color:#0b3a57}
+    .cta{display:inline-flex;gap:10px}
+    button.primary{background:linear-gradient(90deg,#ffd0e6,#c9f0ff);border:none;padding:10px 14px;border-radius:12px;color:#111;font-weight:800;cursor:pointer}
+    button.ghost{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:10px 12px;border-radius:12px;cursor:pointer}
+
+    footer{margin-top:22px;padding:18px;border-radius:12px;background:#0b0b0b;color:#fff;display:flex;justify-content:space-between;align-items:center}
+    .links a{display:inline-block;margin-left:12px;color:#fff;opacity:0.95}
+
+    @media (max-width:980px){.hero{grid-template-columns:1fr}.project-cards{grid-template-columns:1fr}.logo-svg{width:56px;height:56px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo-svg" aria-hidden>
+          <!-- Editable SVG logo: modern 'S' mark -->
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect width="44" height="44" rx="10" fill="url(#g)" />
+            <defs>
+              <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ffd0e6"/>
+                <stop offset="1" stop-color="#c9f0ff"/>
+              </linearGradient>
+            </defs>
+            <path d="M13 18c3-6 18-6 18 0s-6 1-9 4-6 8-9 5" stroke="#1b2b33" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <h1>Seismic</h1>
+          <div style="font-size:12px;color:var(--muted)">Encrypted base-layer blockchain • Created by <strong>Gmsniper</strong></div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#links">Links</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <section class="card">
+        <img class="banner" src="https://www.seismic.systems/" alt="Seismic banner" onerror="this.style.display='none'"/>
+
+        <h2 style="margin-top:14px">Seismic — Encrypted blockchain for private DeFi & apps</h2>
+        <p style="color:var(--muted);margin-top:6px">Seismic integrates <span class="kw">base-layer encryption</span> with secure hardware to protect state across transitions. The stack is open-source and developer-friendly, with components like <span class="kw">seismic-revm</span> and <span class="kw">seismic-client</span>. (Source: Seismic docs & blog.)</p>
+
+        <h3 id="projects" style="margin-top:12px">Featured Project Ideas (with keywords highlighted)</h3>
+        <div class="project-cards">
+          <div class="proj">
+            <img src="https://docs.seismic.systems/assets/logo.png" alt="Seismic docs logo" onerror="this.style.display='none'"/>
+            <div>
+              <strong>Private DEX Prototype</strong><span class="kw">Encrypted liquidity</span>
+              <div style="font-size:13px;color:var(--muted)">AMM with confidential pools and private swaps — keywords: <span class="kw">confidential swaps</span>, <span class="kw">encrypted liquidity</span>.</div>
+            </div>
+          </div>
+
+          <div class="proj">
+            <img src="https://www.seismic.systems/blog/introducing-seismic" alt="Intro" onerror="this.style.display='none'"/>
+            <div>
+              <strong>Encrypted Payments SDK</strong><span class="kw">End-to-end encryption</span>
+              <div style="font-size:13px;color:var(--muted)">Client SDKs for wallets & payments — keywords: <span class="kw">E2E encryption</span>, <span class="kw">payment rails</span>.</div>
+            </div>
+          </div>
+
+          <div class="proj">
+            <img src="https://www.seismic.systems/blog/seismic-secures-7m-led-by-a16z-crypto-to-build-the-encrypted-blockchain" alt="Funding" onerror="this.style.display='none'"/>
+            <div>
+              <strong>Confidential NFT Marketplace</strong><span class="kw">Selective reveal</span>
+              <div style="font-size:13px;color:var(--muted)">Encrypted metadata & selective reveal for buyers — keywords: <span class="kw">encrypted metadata</span>, <span class="kw">selective reveal</span>.</div>
+            </div>
+          </div>
+
+          <div class="proj">
+            <img src="https://docs.seismic.systems/" alt="Docs" onerror="this.style.display='none'"/>
+            <div>
+              <strong>RWA Tokenization PoC</strong><span class="kw">Encrypted legal docs</span>
+              <div style="font-size:13px;color:var(--muted)">Tokenize real-world assets with encrypted off-chain documents — keywords: <span class="kw">RWA</span>, <span class="kw">encrypted legal</span>.</div>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="margin-top:12px">More ideas</h3>
+        <div class="topics">
+          <div class="topic"><h4>Developer Testnet Dashboard <span class="kw">(monitoring)</span></h4><div style="font-size:13px;color:var(--muted)">A dashboard that displays encrypted-state metrics, node health, and secure hardware telemetry.</div></div>
+          <div class="topic"><h4>Private Identity & Credentials <span class="kw">(on-chain credentials)</span></h4><div style="font-size:13px;color:var(--muted)">Selective disclosure credentials for KYC-lite or reputation systems.</div></div>
+        </div>
+
+      </section>
+
+      <aside class="card">
+        <h3>Quick facts</h3>
+        <ul style="color:var(--muted)">
+          <li>Encrypted global state across transactions (see blog and docs)</li>
+          <li>Secure hardware integration to protect keys & memory</li>
+          <li>Transparent & Encrypted memory regions</li>
+          <li>Open-source components: seismic-revm, seismic-client</li>
+          <li>Developer testnet and early app prototypes listed on site</li>
+        </ul>
+
+        <h3 id="quiz">Interactive Quiz — 10 points per correct answer</h3>
+        <div class="quiz" id="quizSection">
+          <div class="q" data-answer="B" data-points="10">
+            <strong>1) What makes Seismic different?</strong>
+            <div class="options">
+              <div class="opt" data-key="A">A) Focus on gaming</div>
+              <div class="opt" data-key="B">B) Base-layer encryption</div>
+              <div class="opt" data-key="C">C) Private token sale only</div>
+              <div class="opt" data-key="D">D) Centralized ledger</div>
+            </div>
+          </div>
+
+          <div class="q" data-answer="B" data-points="10">
+            <strong>2) Seismic duplicates memory into which regions?</strong>
+            <div class="options">
+              <div class="opt" data-key="A">A) Hot & Cold</div>
+              <div class="opt" data-key="B">B) Transparent & Encrypted</div>
+              <div class="opt" data-key="C">C) Volatile & Persistent</div>
+              <div class="opt" data-key="D">D) Read & Write</div>
+            </div>
+          </div>
+
+          <div class="q" data-answer="C" data-points="10">
+            <strong>3) The Seismic stack includes which open-source components?</strong>
+            <div class="options">
+              <div class="opt" data-key="A">A) Proprietary clients</div>
+              <div class="opt" data-key="B">B) Closed SDKs</div>
+              <div class="opt" data-key="C">C) seismic-revm & seismic-client</div>
+              <div class="opt" data-key="D">D) Paywalled tools</div>
+            </div>
+          </div>
+
+          <div class="q" data-answer="C" data-points="10">
+            <strong>4) Which app types are highlighted by Seismic?</strong>
+            <div class="options">
+              <div class="opt" data-key="A">A) Social media only</div>
+              <div class="opt" data-key="B">B) Centralized banks</div>
+              <div class="opt" data-key="C">C) DeFi, payments, RWA apps</div>
+              <div class="opt" data-key="D">D) Mobile OS</div>
+            </div>
+          </div>
+
+          <div class="q" data-answer="C" data-points="10">
+            <strong>5) What is the current public status mentioned on site?</strong>
+            <div class="options">
+              <div class="opt" data-key="A">A) No network</div>
+              <div class="opt" data-key="B">B) Paper-only</div>
+              <div class="opt" data-key="C">C) Developer testnet live</div>
+              <div class="opt" data-key="D">D) Mainnet launched</div>
+            </div>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+            <div class="score">Total: <span id="totalScore">0</span>/50</div>
+            <div class="cta"><button class="primary" id="submitQuiz">Submit</button><button class="ghost" id="resetQuiz">Reset</button></div>
+          </div>
+
+          <div id="quizResult" style="margin-top:10px;font-weight:700;color:var(--muted)"></div>
+        </div>
+
+        <hr style="margin:12px 0;border:none;border-top:1px solid rgba(0,0,0,0.04)"/>
+
+        <h3 id="links">Official quick links</h3>
+        <div style="font-size:13px;color:var(--muted)">
+          <div><a href="https://www.seismic.systems/" target="_blank">Official site</a></div>
+          <div><a href="https://docs.seismic.systems" target="_blank">Seismic Book (Docs)</a></div>
+          <div><a href="https://www.seismic.systems/blog/introducing-seismic" target="_blank">Introducing Seismic</a></div>
+          <div><a href="https://www.seismic.systems/blog/seismic-secures-7m-led-by-a16z-crypto-to-build-the-encrypted-blockchain" target="_blank">Funding announcement</a></div>
+        </div>
+
+      </aside>
+    </main>
+
+    <footer>
+      <div>
+        <div style="font-weight:800">Seismic — Encrypted Blockchain</div>
+        <div style="font-size:13px;opacity:0.95">Created by <strong>Gmsniper</strong> (James William) • X: <em>@Gmsniper6</em> • Discord: <em>@jackcm_wsw3</em></div>
+      </div>
+      <div class="links">
+        <a href="https://docs.seismic.systems" target="_blank">Docs</a>
+        <a href="https://www.seismic.systems/blog" target="_blank">Blog</a>
+        <a href="#projects">Projects</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Quiz behaviour: select options, compute score (10 pts/question)
+    document.querySelectorAll('.opt').forEach(opt=>{
+      opt.addEventListener('click', ()=>{
+        // mark selected within that question
+        const container = opt.closest('.options');
+        container.querySelectorAll('.opt').forEach(o=>o.classList.remove('selected'));
+        opt.classList.add('selected');
+      });
+    });
+
+    document.getElementById('submitQuiz').addEventListener('click', ()=>{
+      let total = 0; let max = 0; let correctCount = 0;
+      document.querySelectorAll('.q').forEach(q=>{
+        const answer = q.getAttribute('data-answer');
+        const points = parseInt(q.getAttribute('data-points')||"0");
+        max += points;
+        const sel = q.querySelector('.opt.selected');
+        if(sel){
+          const key = sel.getAttribute('data-key');
+          if(key === answer){ total += points; correctCount++; }
+        }
+      });
+      document.getElementById('totalScore').textContent = total + '/' + max;
+      const pct = Math.round((total/max)*100);
+      document.getElementById('quizResult').textContent = `You scored ${total} points (${pct}%). Correct answers: ${correctCount}/${document.querySelectorAll('.q').length}`;
+    });
+
+    document.getElementById('resetQuiz').addEventListener('click', ()=>{
+      document.querySelectorAll('.opt').forEach(o=>o.classList.remove('selected'));
+      document.getElementById('totalScore').textContent = '0/50';
+      document.getElementById('quizResult').textContent = '';
+    });
+  </script>
+</body>
+</html>
